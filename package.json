@@ -14,7 +14,9 @@
   "author": "Eric McCormick (https://ericmccormick.io/)",
   "license": "MIT",
   "homepage": "https://bitbucket.org/edm00se/docker-compose-test#readme",
-  "devDependencies": {
-    "express": "^4.14.0"
+  "dependencies": {
+    "connect-redis": "^3.1.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0"
   }
 }
