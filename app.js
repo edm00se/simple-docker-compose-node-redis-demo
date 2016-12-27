@@ -19,7 +19,7 @@ RedisStore['hits'] = 0;
 app.get('/', function (req, res) {
   RedisStore['hits']++;
   var num = RedisStore['hits'];
-  res.send('Hello World!<br><p>I have been loaded '+num+' times.</p>');
+  res.send(`Hello World!<br><p>I have been loaded ${num} times.</p>`);
 });
 
 app.listen(3000, function () {
