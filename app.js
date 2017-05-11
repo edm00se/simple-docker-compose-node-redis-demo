@@ -11,7 +11,9 @@ var options = {
 
 app.use(session({
   store: new RedisStore(options),
-  secret: 'amazing stuff'
+  secret: 'amazing stuff',
+  resave: true,
+  saveUninitialized: true
 }));
 
 RedisStore['hits'] = 0;
