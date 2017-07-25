@@ -1,6 +1,6 @@
-FROM node:boron-alpine
+FROM node:alpine
 RUN mkdir -p /code
-WORKDIR /code
 COPY . /code
+WORKDIR /code
 RUN npm install
-CMD ["npm", "start"]
+CMD ["npm", "run", "watch"]
