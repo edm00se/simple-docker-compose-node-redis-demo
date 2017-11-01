@@ -4,7 +4,7 @@ https://docs.docker.com/compose/gettingstarted/
 
 # Required
 1. [Docker](https://www.docker.com/products/docker)
-2. [Docker Compose](https://docs.docker.com/compose/install/)
+2. [Docker Compose](https://docs.docker.com/compose/install/) (should come with [Docker CE](https://store.docker.com/search?offering=community&type=edition) for macOS and Windows)
 3. (optional) [Kitematic](https://kitematic.com/)
 
 # Adapted
@@ -23,9 +23,8 @@ Adapted from the original docker compose getting started guide to use Node w/ th
 
 1. `git clone https://github.com/edm00se/simple-docker-compose-node-redis-demo.git`
 2. `cd simple-docker-compose-node-redis-demo`
-3. `docker build -t web .`
-4. `docker-compose up`
-5. (optional) observe magic via [Kitematic](https://kitematic.com/)
+3. `docker-compose up` (first time run will perform build, can force a fresh build with `--build`)
+4. (optional) observe magic via [Kitematic](https://kitematic.com/)
 
 # License
 The MIT License (MIT).
