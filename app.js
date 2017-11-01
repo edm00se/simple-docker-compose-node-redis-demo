@@ -20,12 +20,12 @@ app.use(
 
 RedisStore['hits'] = 0;
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   RedisStore['hits']++;
   const num = RedisStore['hits'];
   res.send(`Hello World!<br><p>I have been loaded ${num} times.</p>`);
 });
 
-app.listen(3000, function() {
+app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
