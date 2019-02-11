@@ -5,7 +5,9 @@ https://docs.docker.com/compose/gettingstarted/
 # Required
 1. [Docker](https://www.docker.com/products/docker)
 2. [Docker Compose](https://docs.docker.com/compose/install/) (should come with [Docker CE](https://store.docker.com/search?offering=community&type=edition) for macOS and Windows)
-3. (optional) [Kitematic](https://kitematic.com/)
+3. (optional) a GUI, mostly needed if you're using docker toolbox, but can be helpful for the less Docker experienced
+    - [Portainer](https://www.portainer.io/)
+    - [Kitematic](https://kitematic.com/)
 
 # Adapted
 Adapted from the original docker compose getting started guide to use Node w/ the Express framework in place of python.
@@ -23,8 +25,9 @@ Adapted from the original docker compose getting started guide to use Node w/ th
 
 1. `git clone https://github.com/edm00se/simple-docker-compose-node-redis-demo.git`
 2. `cd simple-docker-compose-node-redis-demo`
-3. `docker-compose up` (first time run will perform build, can force a fresh build with `--build`)
-4. (optional) observe magic via [Kitematic](https://kitematic.com/)
+3. `docker-compose up` (first time run will perform build)
+    - you can force a fresh build with `--build`
+    - you can background (run without holding up your CLI) by using `--detach`
 
 # License
 The MIT License (MIT).
