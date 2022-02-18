@@ -1,22 +1,24 @@
 const express = require('express');
 const app = express();
+const redis = require('redis');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
-const options = {
-  host: 'redis',
-  port: 6379,
-  logErrors: true
-};
+let client = redis.createClient({
+  host: 'localhost',
+  port: 6123,
+  password: 'my secret',
+  db: 1,
+});
 
-app.use(
-  session({
-    store: new RedisStore(options),
-    secret: 'amazing stuff',
-    resave: true,
-    saveUninitialized: true
-  })
-);
+client.on('error', console.error);
+
+session({
+  store: new RedisStore({ client }),
+  saveUninitialized: false,
+  secret: 'amazing stuff',
+  resave: false,
+})
 
 RedisStore['hits'] = 0;
 
