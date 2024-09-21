@@ -17,7 +17,7 @@
     "homepage": "https://github.com/edm00se/simple-docker-compose-node-redis-demo#readme",
     "dependencies": {
         "connect-redis": "^6.1.1",
-        "express": "^4.19.2",
+        "express": "^4.20.0",
         "express-session": "^1.17.2",
         "nodemon": "^2.0.20",
         "redis": "^4.0.3"
